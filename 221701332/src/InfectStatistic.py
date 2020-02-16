@@ -1,4 +1,7 @@
 import argparse
+import os
+import sys
+
 
 def get_parser():
     parser = argparse.ArgumentPaeser(description="National epidemic statistics")
@@ -13,6 +16,31 @@ def get_parser():
     return _parser
 
 class InfectStatistic:
+    def __init__(self, log_list, out_path, date=None, display_type=None, province=None):
+        self.out_path = ''
+        self.log_list = {}
+        self.close_date = None
+        self.display_types = display_types or ['ip', 'sp', 'cure', 'dead']
+        self.display_province = province or []
+        self.log_data = {}
+
+    def log_verifite(self, log_list):
+        if not os.path.isdir(log_list):
+            sys.exit('error-log-path')
+
+    def out_verfite(self, out_path):
+        if not os.path.isfile(out_path):
+            sys.exit('error-out-path')
+
+
+
+
+
+
+
+
+
+
 
 
 
