@@ -32,6 +32,17 @@ class InfectStatistic:
         if not os.path.isfile(out_path):
             sys.exit('error-out-path')
 
+    def read_log(self,log_list):
+        pathdir = os.listdir(log_list)
+        for file in pathdir:
+            self.parse_each_row(file)
+
+    def parse_each_row(self,file):
+
+
+
+
+     
 
 
 
