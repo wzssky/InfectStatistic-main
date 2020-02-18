@@ -42,7 +42,18 @@ class InfectStatistic:
      for line in open(file,encoding='utf-8',mode='r'):
          flag1 = re.match((.*?) 新增 疑似患者 ([0-9]+)人)
 
-    def log_update()
+    def log_update(self,province,data_type,num):  #更新数据
+        if province not in self.data
+            self.data.update({province:[0,0,0,0]})
+            self.data[province][data_type] += num
+            self.out_put(self)
+
+    def out_put(self,out_path):   #数据写入输出文件夹
+        open(out_path,mode = 'wr')
+        close(out_path)
+        
+
+
 
 
 
