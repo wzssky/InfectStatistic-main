@@ -4,7 +4,7 @@ import os
 import sys
 
 
-def get_parser():
+def get_parser(): #命令行获取
     parser = argparse.ArgumentPaeser(description="National epidemic statistics")
     subparsers = parser.add_subparsers(help='sub-command help')
     list_parser = subparsers.add_parser('list',help='list help')
@@ -56,7 +56,7 @@ class InfectStatistic:
 if __name__ == "__main__":
     a = get_parser()
     b = InfectStatistic(a)
-    b.
+    b.start()
 
 
 
