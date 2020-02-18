@@ -1,3 +1,4 @@
+# coding=utf-8
 import argparse
 import os
 import sys
@@ -32,12 +33,20 @@ class InfectStatistic:
         if not os.path.isfile(out_path):
             sys.exit('error-out-path')
 
-    def read_log(self,log_list):
+    def read_log(self,log_list):#读取目录下的文件
         pathdir = os.listdir(log_list)
         for file in pathdir:
             self.parse_each_row(file)
 
-    def parse_each_row(self,file):
+    def parse_each_row(self,file):#按行解析文件
+     for line in open(file,encoding='utf-8',mode='r'):
+         flag1 = re.match((.*?) 新增 疑似患者 ([0-9]+)人)
+
+    def log_update()
+
+
+
+
 
 
 
