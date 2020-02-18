@@ -51,8 +51,12 @@ class InfectStatistic:
     def out_put(self,out_path):   #数据写入输出文件夹
         open(out_path,mode = 'wr')
         close(out_path)
-        
 
+    def start_line():  #启动函数
+if __name__ == "__main__":
+    a = get_parser()
+    b = InfectStatistic(a)
+    b.
 
 
 
